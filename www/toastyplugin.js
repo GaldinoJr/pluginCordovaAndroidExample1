@@ -1,21 +1,21 @@
-// Construtor vazio
-function  ToastyPlugin () {}
+// Empty constructor
+function ToastyPlugin() {}
 
-// A função que passa no trabalho junto aos shells nativos
-// Message é uma string, a duração pode ser 'long' ou 'short'
-ToastyPlugin . protótipo . show  =  function ( mensagem , duração , successCallback , errorCallback ) {
+// The function that passes work along to native shells
+// Message is a string, duration may be 'long' or 'short'
+ToastyPlugin.prototype.show = function(message, duration, successCallback, errorCallback) {
   var options = {};
-  opções . message  = message;
-  opções . duração  = duração;
-  cordova . exec (successCallback, errorCallback, ' ToastyPlugin ' , ' show ' , [opções]);
+  options.message = message;
+  options.duration = duration;
+  cordova.exec(successCallback, errorCallback, 'ToastyPlugin', 'show', [options]);
 }
 
-// Construtor de instalação que liga o ToastyPlugin à janela
-ToastyPlugin . install  =  function () {
-  if ( ! janela . plugins ) {
-    janela . plugins  = {};
+// Installation constructor that binds ToastyPlugin to window
+ToastyPlugin.install = function() {
+  if (!window.plugins) {
+    window.plugins = {};
   }
-  janela . plugins . toastyPlugin  =  novo  ToastyPlugin ();
-   janela de retorno . plugins . tostadoPlugin ;
+  window.plugins.toastyPlugin = new ToastyPlugin();
+  return window.plugins.toastyPlugin;
 };
-cordova . addConstructor ( ToastyPlugin . install );
+cordova.addConstructor(ToastyPlugin.install);
