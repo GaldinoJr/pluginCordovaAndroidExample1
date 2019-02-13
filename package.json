@@ -1,0 +1,36 @@
+{
+    " name " : " cordova-plugin-toastyplugin " ,
+    " versão " : " 0.0.1 " ,
+    " description " : " Um plugin do Android Cordova que permite aos usuários exibir mensagens simples do Toast na parte inferior da tela. " ,
+    " cordova " : {
+      " id " : " cordova-plugin-toastyplugin " ,
+      " plataformas " : [
+        " android "
+      ]
+    }
+    " repositório " : {
+      " tipo " : " git " ,
+      " url " : " git + https://github.com/GaldinoJr/pluginCordovaAndroidExample1.git "
+    }
+    " palavras-chave " : [
+      " Toast " ,
+      " Notificação " ,
+      " Mensagem " ,
+      " Alerta " ,
+      " ecossistema: cordova " ,
+      " cordova-android "
+    ]
+    " motores " : [
+      {
+        " nome " : " cordova " ,
+        " version " : " > = 3.0.0 "
+      }
+    ]
+    " autor " : " Stanley Idesis <stan.idesis@gmail.com> " ,
+    " licença " : " MIT " ,
+    " bugs " : {
+      " url " : " https://github.com/GaldinoJr/pluginCordovaAndroidExample1 "
+    }
+    " homepage " : " https://github.com/GaldinoJr/pluginCordovaAndroidExample1/ "
+  }
+}  
