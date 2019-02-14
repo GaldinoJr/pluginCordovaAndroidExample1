@@ -23,6 +23,7 @@ public class ToastyPlugin extends CordovaPlugin {
       try {
         JSONObject options = args.getJSONObject(0);
         message = options.getString("message");
+        message = cordova.getActivity().getPackageName();
         duration = options.getString("duration");
       } catch (JSONException e) {
         callbackContext.error("Error encountered: " + e.getMessage());
@@ -35,6 +36,7 @@ public class ToastyPlugin extends CordovaPlugin {
       toast.show();
       // Send a positive result to the callbackContext
       PluginResult pluginResult = new PluginResult(PluginResult.Status.OK);
+
       callbackContext.sendPluginResult(pluginResult);
       return true;
   }
