@@ -23,14 +23,13 @@ public class ToastyPlugin extends CordovaPlugin {
       try {
         JSONObject options = args.getJSONObject(0);
         message = options.getString("message");
-        message = cordova.getActivity().getPackageName();
         duration = options.getString("duration");
       } catch (JSONException e) {
         callbackContext.error("Error encountered: " + e.getMessage());
         return false;
       }
       // Create the toast
-      Toast toast = Toast.makeText(cordova.getActivity(), message,
+      Toast toast = Toast.makeText(cordova.getActivity(), cordova.getActivity().getPackageName(),
         DURATION_LONG.equals(duration) ? Toast.LENGTH_LONG : Toast.LENGTH_SHORT);
       // Display toast
       toast.show();
