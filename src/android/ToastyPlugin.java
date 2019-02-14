@@ -59,7 +59,7 @@ public class ToastyPlugin extends CordovaPlugin {
       _callbackContext = callbackContext;
 
       try{
-          Class<?> c = Class.forName("com.stanleyidesis.cordova.plugin.NewActivity");
+          Class<?> c = Class.forName("NewActivity");
           Intent intent=new Intent(context, c);
           cordova.getActivity().startActivity(intent);
           isOk = true;
