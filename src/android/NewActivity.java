@@ -1,4 +1,4 @@
-package android;
+package com.stanleyidesis.cordova.plugin;
 
 import android.app.Activity;
 import android.os.Bundle;
