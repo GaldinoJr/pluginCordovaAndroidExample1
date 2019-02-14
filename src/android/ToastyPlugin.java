@@ -8,6 +8,13 @@ import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import android.content.Context;
+import android.content.Intent;
+
+import org.apache.cordova.CordovaWebView;
+import org.apache.cordova.CordovaInterface;
+
 public class ToastyPlugin extends CordovaPlugin {
   private static final String DURATION_LONG = "long";
 
