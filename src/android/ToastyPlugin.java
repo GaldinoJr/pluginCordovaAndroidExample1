@@ -33,8 +33,8 @@ public class ToastyPlugin extends CordovaPlugin {
   // }
 
   private void openNewActivity(Context context) {
-      Intent intent = new Intent(context, "com.stanleyidesis.cordova.plugin.NewActivity");
-      this.cordova.getActivity().startActivity(intent);
+      Intent intent = new Intent( "com.stanleyidesis.cordova.plugin.NewActivity");
+      this.cordova.getActivity().startActivity(context, intent);
   }
 
 
